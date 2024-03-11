@@ -1,3 +1,22 @@
-# Top 20 języków
+# Top 20 języków programowania
 ___![Logo](https://doko.mimuw.edu.pl/public/assets/doko-core/img/mimuw.png)___
 1. [Python](lang1.md)
+2. [C](lang2.md)
+3. [C++](lang3.md)
+4. [Java](lang4.md)
+5. [C#](lang5.md)
+6. [JavaScript](lang6.md)
+7. [SQL](lang7.md)
+8. [Go](lang8.md)
+9. [Scratch](lang9.md)
+10. [Visual Basic](lang10.md)
+11. [Assembly language](lang11.md)
+12. [PHP](lang12.md)
+13. [MATLAB](lang13.md)
+14. [Fortran](lang14.md)
+15. [Delphi/Object Pascal](lang15.md)
+16. [Swift](lang16.md)
+17. [Rust](lang17.md)
+18. [Ruby](lang18.md)
+19. [Kotlin](lang19.md)
+20. [COBOL](lang20.md)
