@@ -4,3 +4,5 @@
 [Lab 2](/lab2.html)
 
 [Lab 3](/lab3/lab3.html)
+
+[Lab 4](/lab4/)
