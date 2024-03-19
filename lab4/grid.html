@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lab 4</title>
+        <link href="./output.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Strona z labu <s>2</s> <s>3</s> 4</h1>
+            <h2>Jan Opalski</h2>
+            <h4>19.03.2024</h4>
+        </header>
+        <article>
+            <h2>Article</h2>
+            <table class="table-auto bg-amber-400/10">
+                <caption class="text-violet-700">
+                    Podziękowania podmiotu <strong>lirycznego</strong> "Ballady dla obywatela miasteczka P." (org. G. Brassens ("Chanson pour l'Auvergnat"), tłum. J. Kaczmarski)
+                </caption>
+                <tr>
+                    <th>Za co</th>
+                    <th>Komu</th>
+                    <th>Gdy umrzesz</th>
+                </tr>
+                <tr class="text-rose-950/90">
+                    <td>Cztery drwa</td>
+                    <td>Obywatel miasteczka P.</td>
+                    <td rowspan="3" class="text-red-800">Niech powiozą cię poprzez błękitny nieba łan, gdzie czeka Pan.</td>
+                </tr>
+                <tr class="text-orange-950/80">
+                    <td>Chleba kęs</td>
+                    <td>Dziewka z oberży w miasteczku P.</td>
+                </tr>
+                <tr class="text-amber-500/50">
+                    <td>Uśmiech</td>
+                    <td>Obcy przybysz w miasteczku P.</td>
+                </tr>
+            </table>
+
+            <hr><p class="bg-amber-400">Lista znanych mi wykonawców tej piosenki:</p>
+            <ol type="i" class="bg-amber-500">
+                <li>Georges Brassens</li>
+                <li>Jacek Kaczmarski</li>
+                <li>Strachy na Lachy</li>
+            </ol>
+            <div class="flex flex-row">
+                <div class="flex-auto">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Brassens_TNP_1966.jpg/800px-Brassens_TNP_1966.jpg"
+                    alt="Georges Brassens"
+                >
+                </div>
+                <div class="flex-auto">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Jacek_Kaczmarski.jpg"
+                    alt="Jacek Kaczmarski"
+                >
+                </div>
+                <div class="flex-none">
+                <img
+                    src="https://i.scdn.co/image/ab6761610000e5ebea77785f08b34af2d865e5b9"
+                    alt="Strachy na Lachy"
+                >
+                </div>
+            </div>
+
+            <hr>
+            <details>
+                <summary>Życiorys Brassensa</summary>
+                <p>W wieku 16 lat tworzył razem z kolegami zespół muzyczny, w którym grał na banjo. Pisał pierwsze piosenki, których melodie wykorzystał w późniejszej, dojrzalszej twórczości. Od 1940 roku mieszkał w Paryżu. W 1943 roku otrzymał wezwanie „na roboty” do Niemiec. 8 marca 1943 wyjechał do Basdorf, małej miejscowości leżącej 20 km od Berlina, gdzie pracował przymusowo przez rok. Zdobył tam uznanie, śpiewając swoje piosenki. W 1946 roku Brassens pisywał pod różnymi pseudonimami artykuły dla anarchistycznego dziennika „Le Libertaire”. W tym okresie tworzył jako poeta i autor piosenek (bez większych sukcesów).</p>
+                <p>Prawdziwa kariera rozpoczęła się, kiedy artysta miał 31 lat, po tym jak dzięki staraniom przyjaciół wystąpił w słynnym kabarecie prowadzonym na Montmartre przez Patachou. Patachou, sławna wówczas piosenkarka, najpierw sama wykonała kilka jego utworów, a następnie przedstawiła ich autora paryskiej publiczności. Wkrótce Brassens nagrał pierwszą płytę ze swoimi piosenkami oraz wyruszył na tournée wraz z Patachou i zespołem „Frères Jacques”. W 1967 roku otrzymał Grand Prix de Poésie Akademii Francuskiej, nagrodę będącą ukoronowaniem jego sukcesu literackiego.</p>
+                <p>Brassens zdobył popularność, wykonując własne utwory. Komponował też muzykę do tekstów Verlaine’a, Villona, Hugo, Aragona i innych. Na estradzie aktywnie występował do marca 1977 roku. Zmarł na raka w wieku 60 lat.</p>
+                <p><a href="https://pl.wikipedia.org/wiki/Georges_Brassens" class="text-teal-400">Źródło</a></p>
+            </details>
+
+            <hr>
+            <span class="animate-ping">Licznik labów: <progress max="14" value="4"></progress></span>
+
+            <details class="shadow-inner">
+                <summary>Bardowie jeszcze raz, ale tym razem z flex-col</summary>
+                <div class="flex flex-col">
+                    <div class="flex-auto">
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Brassens_TNP_1966.jpg/800px-Brassens_TNP_1966.jpg"
+                            alt="Georges Brassens"
+                        >
+                    </div>
+                    <div class="flex-auto">
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Jacek_Kaczmarski.jpg"
+                            alt="Jacek Kaczmarski"
+                        >
+                    </div>
+                    <div class="flex-none">
+                        <img
+                            src="https://i.scdn.co/image/ab6761610000e5ebea77785f08b34af2d865e5b9"
+                            alt="Strachy na Lachy"
+                        >
+                    </div>
+                </div>
+            </details>
+        </article>
+        <aside>
+            <form class="shadow-xl bg-red-400">
+                <label for="opinion">Co sądzisz o tej pięknej stronie?</label>
+                <input id="opinion" class="bg-red-200"><br>
+                <label for="poll">Najlepszy wykonawca</label>
+                <select id="poll">
+                    <optgroup label="Francja">
+                        <option>Georges Brassens</option>
+                    </optgroup>
+                    <optgroup label="Polska">
+                        <option>Jacek Kaczmarski</option>
+                        <option>Strachy na Lachy</option>
+                    </optgroup>
+                </select><br>
+                <button class="bg-red-600 shadow-inner">Ten przycisk nic nie robi</button>
+            </form>
+
+            <hr><p>Znajdź swojego wykonawcę:</p>
+            <map name="wiki">
+                <area
+                    shape="rect"
+                    coords="0,0,100,150"
+                    href="https://pl.wikipedia.org/wiki/Georges_Brassens"
+                    alt="Brassens"
+                >
+                <area
+                    shape="rect"
+                    coords="100,0,200,150"
+                    href="https://pl.wikipedia.org/wiki/Jacek_Kaczmarski"
+                    alt="Kaczmarski"
+                >
+                <area
+                    shape="rect"
+                    coords="200,0,300,150"
+                    href="https://pl.wikipedia.org/wiki/Strachy_na_Lachy"
+                    alt="Strachy na Lachy"
+                >
+            </map>
+            <img
+                usemap="#wiki"
+                src="https://t4.ftcdn.net/jpg/00/27/40/01/360_F_27400180_YZkAPV5s7QyvCqG9L4hE7m3rK8GAprGE.jpg"
+                height="150"
+                width="300"
+                alt="Numbers: 1 2 3"
+            >
+        </aside>
+        <footer>
+            <p><em>Jan Opalski</em></p>
+            <p><em><a href="https://kciebiera.github.io/www-2324/lab2.html" class="text-teal-400">Treść zadania</a></em></p>
+            <p><em><a href="https://kciebiera.github.io/www-2324/lab3.html">Rozwinięcie treści</a></em></p>
+            <p><em><a href="https://kciebiera.github.io/www-2324/lab4.html">Zakończenie treści</a></em></p>
+        </footer>
+    </body>
+</html>
