@@ -101,50 +101,61 @@
             </details>
         </article>
         <aside>
-            <form class="shadow-xl bg-red-400">
-                <label for="opinion">Co sądzisz o tej pięknej stronie?</label>
-                <input id="opinion" class="bg-red-200"><br>
-                <label for="poll">Najlepszy wykonawca</label>
-                <select id="poll">
-                    <optgroup label="Francja">
-                        <option>Georges Brassens</option>
-                    </optgroup>
-                    <optgroup label="Polska">
-                        <option>Jacek Kaczmarski</option>
-                        <option>Strachy na Lachy</option>
-                    </optgroup>
-                </select><br>
-                <button class="bg-red-600 shadow-inner">Ten przycisk nic nie robi</button>
-            </form>
+            <div>
+                <form class="shadow-xl bg-red-400">
+                    <label for="opinion">Co sądzisz o tej pięknej stronie?</label>
+                    <input id="opinion" class="bg-red-200"><br>
+                    <label for="poll">Najlepszy wykonawca</label>
+                    <select id="poll">
+                        <optgroup label="Francja">
+                            <option>Georges Brassens</option>
+                        </optgroup>
+                        <optgroup label="Polska">
+                            <option>Jacek Kaczmarski</option>
+                            <option>Strachy na Lachy</option>
+                        </optgroup>
+                    </select><br>
+                    <button class="bg-red-600 shadow-inner">Ten przycisk nic nie robi</button>
+                </form>
+            </div>
 
-            <hr><p>Znajdź swojego wykonawcę:</p>
-            <map name="wiki">
-                <area
-                    shape="rect"
-                    coords="0,0,100,150"
-                    href="https://pl.wikipedia.org/wiki/Georges_Brassens"
-                    alt="Brassens"
+            <div>
+                <p>Znajdź swojego wykonawcę:</p>
+                <map name="wiki">
+                    <area
+                        shape="rect"
+                        coords="0,0,100,150"
+                        href="https://pl.wikipedia.org/wiki/Georges_Brassens"
+                        alt="Brassens"
+                    >
+                    <area
+                        shape="rect"
+                        coords="100,0,200,150"
+                        href="https://pl.wikipedia.org/wiki/Jacek_Kaczmarski"
+                        alt="Kaczmarski"
+                    >
+                    <area
+                        shape="rect"
+                        coords="200,0,300,150"
+                        href="https://pl.wikipedia.org/wiki/Strachy_na_Lachy"
+                        alt="Strachy na Lachy"
+                    >
+                </map>
+                <img
+                    usemap="#wiki"
+                    src="https://t4.ftcdn.net/jpg/00/27/40/01/360_F_27400180_YZkAPV5s7QyvCqG9L4hE7m3rK8GAprGE.jpg"
+                    height="150"
+                    width="300"
+                    alt="Numbers: 1 2 3"
                 >
-                <area
-                    shape="rect"
-                    coords="100,0,200,150"
-                    href="https://pl.wikipedia.org/wiki/Jacek_Kaczmarski"
-                    alt="Kaczmarski"
+            </div>
+
+            <div>
+                <img
+                    src="https://www.jakubzasada.pl/wp-content/uploads/2015/05/georges-brassens-goryl-1.jpg"
+                    class="animate-ping"
                 >
-                <area
-                    shape="rect"
-                    coords="200,0,300,150"
-                    href="https://pl.wikipedia.org/wiki/Strachy_na_Lachy"
-                    alt="Strachy na Lachy"
-                >
-            </map>
-            <img
-                usemap="#wiki"
-                src="https://t4.ftcdn.net/jpg/00/27/40/01/360_F_27400180_YZkAPV5s7QyvCqG9L4hE7m3rK8GAprGE.jpg"
-                height="150"
-                width="300"
-                alt="Numbers: 1 2 3"
-            >
+            </div>
         </aside>
         <footer>
             <p><em>Jan Opalski</em></p>
