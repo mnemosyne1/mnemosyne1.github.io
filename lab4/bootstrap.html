@@ -5,45 +5,99 @@
         <title>Lab 4: BS</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     </head>
-    <body>
+    <body class="bg-info text-muted">
         <div class="container">
             <main>
+                <div class="text-center">
+                    <img
+                        src="https://www.jakubzasada.pl/wp-content/uploads/2015/05/georges-brassens-goryl-1.jpg"
+                        class="mb-4"
+                        width="100"
+                    >
+                    <h3>Witamy na stronie z ankietą</h3>
+                    <h5>Co wiesz o Brassensie i nie tylko</h5>
+                </div>
                 <form>
-                    <div>
-                        <label for="text">Imię i nazwisko</label>
-                        <input id="text">
-                    </div>
-                    <div class="my-2">
-                        <div class="form-check">
-                            <input type="radio" id="rad1" class="form-check-input" checked required name="radpick">
-                            <label for="rad1">Radio 1</label>
+                    <div class="row">
+                        <div class="col">
+                            <label for="name" class="form-label">Imię</label>
+                            <input type="text" id="name" class="form-control" placeholder="Jan" required>
                         </div>
-                        <div class="form-check">
-                            <input type="radio" id="rad1" class="form-check-input" required name="radpick">
-                            <label for="rad1">Radio 2</label>
+                        <div class="col">
+                            <label for="surname" class="form-label">Nazwisko</label>
+                            <input id="surname" class="form-control" placeholder="Kowalski" required>
                         </div>
                     </div>
+                    <div class="my-2 row">
+                        <div class="col row">
+                            <h5>Ile znasz wykonań "Chanson pour l'Auvergnat"?</h5>
+                            <div class="col-2">
+                                <div class="form-check">
+                                    <input type="radio" id="rad0" class="form-check-input" checked required name="ile" value="0">
+                                    <label for="rad0" class="form-check-label">0</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" id="rad1" class="form-check-input" required name="ile" value="1">
+                                    <label for="rad1" class="form-check-label">1</label>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="form-check">
+                                    <input type="radio" id="rad2" class="form-check-input" required name="ile" value="2">
+                                    <label for="rad2" class="form-check-label">2</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" id="rad4" class="form-check-input" required name="ile" value="3">
+                                    <label for="rad3" class="form-check-label">3</label>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="col">
+                        <h5>Wiesz o czym jest "Le gorille"?</h5>
+                            <div class="form-check">
+                                <input type="radio" id="rad5" class="form-check-input" required name="gorille" value="yes">
+                                <label for="rad5" class="form-check-label">Tak</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" id="rad6" class="form-check-input" checked required name="gorille" value="no">
+                                <label for="rad6" class="form-check-label">Nie</label>
+                            </div>
+                    </div>
+                    </div>
+                    <div class="my-3 row">
+                        <div class="col">
+                            <h5>Ładnie śpiewa(ją):</h5>
+                            <div class="form-check">
+                                <input type="checkbox" id="che1" class="form-check-input">
+                                <label for="che1" class="form-check-label">Georges Brassens</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" id="che2" class="form-check-input">
+                                <label for="che2" class="form-check-label">Jacek Kaczmarski</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" id="che3" class="form-check-input">
+                                <label for="che3" class="form-check-label">Strachy na Lachy</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                        <select class="form-select-sm" name="city">
+                            <option selected disabled>Wybierz najlepsze miasto</option>
+                            <option value="set">Sète</option>
+                            <option value="waw">Warszawa</option>
+                            <option value="pil">Piła</option>
+                          </select>
+                    </div>
+                    </div>
+
+                    
+
                     <div class="my-3">
-                        <div class="form-check">
-                            <input type="checkbox" id="che1">
-                            <label for="che1">Checkbox 1</label>
-                        </div>
-                        <div class="form-check">
-                            <input type="checkbox" id="che2">
-                            <label for="che2" class="form-check-label">Checkbox 2</label>
-                        </div>
-                        <div class="form-check">
-                            <input type="checkbox" id="che3">
-                            <label for="che3">Checkbox 3</label>
-                        </div>
-                    </div>
-                    <div>
-                        <button type="submit">Wyślij</button>
+                        <button type="submit" class="btn btn-primary">Wyślij</button>
                     </div>
                 </form>
             </main>
         </div>
     </body>
-    <script src="bootstrap.js"></script>
-    <script src="checkout.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>
