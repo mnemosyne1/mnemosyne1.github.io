@@ -41,21 +41,30 @@ clearButton.addEventListener('click', clearCanvas);
 function startDrawing(event: MouseEvent) {
     isDrawing = true;
     startPoint = getMousePosition(event);
-    let existingRect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    /*let existingRect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
     existingRect.classList.add('drawing'); // właśnie powstaje
     existingRect.setAttribute('fill', fillColorInput.value);
     existingRect.setAttribute('x', getMousePosition(event).x.toString());
     existingRect.setAttribute('y', getMousePosition(event).y.toString());
     existingRect.setAttribute('width', '0');
     existingRect.setAttribute('height', '0');
-    svgCanvas.appendChild(existingRect);
+    svgCanvas.appendChild(existingRect);*/
 }
 
 function drawRectangle(event: MouseEvent) {
-    if (!isDrawing || !startPoint) return;
+    if (!isDrawing || !startPoint)
+        return;
 
     let currentPoint = getMousePosition(event);
     let existingRect = svgCanvas.querySelector('rect.drawing') as SVGRectElement;
+
+    if (!existingRect) {
+        existingRect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+        existingRect.classList.add('drawing'); // właśnie powstaje
+        existingRect.setAttribute('fill', fillColorInput.value);    
+        svgCanvas.appendChild(existingRect);
+    }
+
     let x = Math.min(startPoint.x, currentPoint.x);
     let y = Math.min(startPoint.y, currentPoint.y);
     let width = Math.abs(startPoint.x - currentPoint.x);
@@ -85,10 +94,17 @@ function endDrawing(event: MouseEvent) {
         };
         if (rect.width == 0 || rect.height == 0)
             svgCanvas.removeChild(drawingRect);
-        state.rectangles.push(rect);
+        else
+            state.rectangles.push(rect);
+        svgCanvas.addEventListener('click', selectRectangle);
+        // Example usage of serialisation
+        // Save the current state to JSON
+        let serializedState = serializeState();
+        console.log(serializedState);
+
+        // Load the state from JSON
+        deserializeState(serializedState);
     }
-    svgCanvas.addEventListener('click', selectRectangle);
-    console.log(serializedState);
 }
 
 function addRectangleFromForm() {
@@ -182,19 +198,11 @@ function serializeState(): string {
 }
 
 function deserializeState(serializedState: string) {
-    state = JSON.parse(serializedState);
     clearCanvas();
+    state = JSON.parse(serializedState);
     state.rectangles.forEach(rect => {
         let rectElement = createRectElement(rect);
         rectElement.addEventListener('click', selectRectangle);
         svgCanvas.appendChild(rectElement);
     });
 }
-
-// Example usage
-// Save the current state to JSON
-let serializedState = serializeState();
-console.log(serializedState);
-
-// Load the state from JSON
-deserializeState(serializedState);
