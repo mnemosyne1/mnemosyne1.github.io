@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Rectangle Editor</title>
+    <style>
+        #svgCanvas {
+            border: 1px solid black;
+            width: 800px;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h1>SVG Rectangle Editor</h1>
+    <svg id="svgCanvas"></svg>
+    <div>
+        <label for="fillColor">Fill Color:</label>
+        <input type="color" id="fillColor" name="fillColor">
+        <button id="clearButton">Clear Canvas</button>
+    </div>
+    <div>
+        <h2>Add Rectangle</h2>
+        <form id="rectangleForm">
+            <label for="x1">x1:</label>
+            <input type="number" id="x1" name="x1">
+            <label for="y1">y1:</label>
+            <input type="number" id="y1" name="y1">
+            <label for="x2">x2:</label>
+            <input type="number" id="x2" name="x2">
+            <label for="y2">y2:</label>
+            <input type="number" id="y2" name="y2">
+            <button type="button" id="addButton">Add Rectangle</button>
+        </form>
+        <h2>Remove Rectangle</h2>
+        <div id="removeInfo"></div>
+        <button id="removeButton">Remove Selected Rectangle</button>
+    </div>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
