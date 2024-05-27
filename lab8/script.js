@@ -21,7 +21,8 @@ clearButton.addEventListener('click', clearCanvas);
 function startDrawing(event) {
     isDrawing = true;
     startPoint = getMousePosition(event);
-    /*let
+    /*let existingRect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    existingRect.classList.add('drawing'); // właśnie powstaje
     existingRect.setAttribute('fill', fillColorInput.value);
     existingRect.setAttribute('x', getMousePosition(event).x.toString());
     existingRect.setAttribute('y', getMousePosition(event).y.toString());
